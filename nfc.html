@@ -1,0 +1,520 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Digital NFC Contact Card">
+
+    <meta name="theme-color"
+          content="#111111">
+
+    <title>Eliezer Glenn Castelo | Digital Card</title>
+
+
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         DIGITAL CARD
+    =================================================== -->
+
+    <main class="card">
+
+
+        <!-- ==================================================
+             COVER
+        =================================================== -->
+
+        <div class="cover">
+
+            <div class="cover-circle circle-one"></div>
+
+            <div class="cover-circle circle-two"></div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             PROFILE CONTENT
+        =================================================== -->
+
+        <section class="profile">
+
+
+            <!-- PROFILE PHOTO -->
+
+            <div class="profile-image-container">
+
+                <img
+                    src="profile.jpg"
+                    alt="Eliezer Glenn Castelo"
+                    class="profile-image"
+                >
+
+            </div>
+
+
+
+            <!-- NAME -->
+
+            <h1>
+                Eliezer Glenn Castelo
+            </h1>
+
+
+            <!-- PROFESSION -->
+
+            <p class="profession">
+                Innovation and IoT Enthusiast
+            </p>
+
+
+            <!-- BIO -->
+
+            <p class="bio">
+
+                I am a passionate innovator and IoT enthusiast, dedicated to exploring the latest technologies and creating innovative solutions that make a difference. With a strong background in technology and a keen eye for detail, I strive to bring ideas to life and contribute to the advancement of the digital world.
+
+            </p>
+
+
+
+            <!-- ==================================================
+                 QUICK ACTIONS
+            =================================================== -->
+
+            <div class="quick-actions">
+
+
+                <!-- CALL -->
+
+                <a
+                    href="tel:+639926594206"
+                    class="quick-button primary"
+                >
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span>
+                        Call
+                    </span>
+
+                </a>
+
+
+
+                <!-- EMAIL -->
+
+                <a
+                    href="mailto:casteloeliezerglenn@gmail.com"
+                    class="quick-button"
+                >
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <span>
+                        Email
+                    </span>
+
+                </a>
+
+
+
+                <!-- SHARE -->
+
+                <button
+                    onclick="shareCard()"
+                    class="quick-button"
+                >
+
+                    <i class="fa-solid fa-share-nodes"></i>
+
+                    <span>
+                        Share
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 CONTACT INFORMATION
+            =================================================== -->
+
+            <div class="contact-section">
+
+
+                <!-- PHONE -->
+
+                <a
+                    href="tel:+639926594206"
+                    class="contact-item"
+                >
+
+                    <div class="contact-icon">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </div>
+
+
+                    <div class="contact-text">
+
+                        <span>
+                            Phone
+                        </span>
+
+                        <strong>
+                            +63 9926594206
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- EMAIL -->
+
+                <a
+                    href="mailto:casteloeliezerglenn@gmail.com"
+                    class="contact-item"
+                >
+
+                    <div class="contact-icon">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </div>
+
+
+                    <div class="contact-text">
+
+                        <span>
+                            Email
+                        </span>
+
+                        <strong>
+                            casteloeliezerglenn@gmail.com
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- LOCATION -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+
+                    <div class="contact-text">
+
+                        <span>
+                            Location
+                        </span>
+
+                        <strong>
+                            Guimba, Nueva Ecija, Philippines
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 SOCIAL MEDIA
+            =================================================== -->
+
+            <section class="social-section">
+
+
+                <h2>
+                    Connect with me
+                </h2>
+
+
+
+                <div class="social-grid">
+
+
+                    <!-- FACEBOOK -->
+
+                    <a
+                        href="https://www.facebook.com/casteloglenn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-button"
+                    >
+
+                        <div class="social-icon facebook">
+
+                            <i class="fa-brands fa-facebook-f"></i>
+
+                        </div>
+
+                        <span>
+                            Facebook
+                        </span>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square external"></i>
+
+                    </a>
+
+
+
+                    <!-- INSTAGRAM -->
+
+                    <a
+                        href="https://www.instagram.com/ohiozergel/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-button"
+                    >
+
+                        <div class="social-icon instagram">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </div>
+
+                        <span>
+                            Instagram
+                        </span>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square external"></i>
+
+                    </a>
+
+
+
+                    <!-- TIKTOK -->
+
+                    <a
+                        href="https://www.tiktok.com/@zergelqtt"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-button"
+                    >
+
+                        <div class="social-icon tiktok">
+
+                            <i class="fa-brands fa-tiktok"></i>
+
+                        </div>
+
+                        <span>
+                            TikTok
+                        </span>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square external"></i>
+
+                    </a>
+
+
+
+                    <!-- LINKEDIN -->
+
+                    <a
+                        href="https://www.linkedin.com/in/eliezer-glenn-castelo-a8130234b/?isSelfProfile=true"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-button"
+                    >
+
+                        <div class="social-icon linkedin">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </div>
+
+                        <span>
+                            LinkedIn
+                        </span>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square external"></i>
+
+                    </a>
+
+
+
+                    
+
+
+
+                    <!-- YOUTUBE -->
+
+                    <a
+                        href="https://www.youtube.com/@yourusername"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-button"
+                    >
+
+                        <div class="social-icon youtube">
+
+                            <i class="fa-brands fa-youtube"></i>
+
+                        </div>
+
+                        <span>
+                            YouTube
+                        </span>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square external"></i>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================================
+                 WEBSITE
+            =================================================== -->
+
+            <a
+                href="https://yourwebsite.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="website-button"
+            >
+
+                <div class="website-left">
+
+
+                    <div class="website-icon">
+
+                        <i class="fa-solid fa-globe"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Website
+                        </span>
+
+                        <strong>
+                            Visit my website
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+
+            <!-- ==================================================
+                 SAVE CONTACT
+            =================================================== -->
+
+            <button
+                onclick="saveContact()"
+                class="save-button"
+            >
+
+                <i class="fa-solid fa-address-card"></i>
+
+                Save Contact
+
+            </button>
+
+
+
+            <!-- ==================================================
+                 FOOTER
+            =================================================== -->
+
+            <footer>
+
+                <p>
+                    Digital Contact Card
+                </p>
+
+                <small>
+                    Tap • Connect • Save
+                </small>
+
+            </footer>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+         NFC MESSAGE
+    =================================================== -->
+
+    <div class="nfc-message">
+
+        <i class="fa-solid fa-wifi"></i>
+
+        Tap NFC card to open this profile
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
+```
