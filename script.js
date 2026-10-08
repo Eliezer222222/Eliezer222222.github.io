@@ -1,12 +1,12 @@
 async function saveContact() {
     const firstName = "Eliezer Glenn";
     const lastName = "Castelo";
-    const organization = "Your Company";
+    const organization = "Innovation and Technology Solutions";
     const jobTitle = "Information Technology Professional";
-    const phone = "+639123456789";
-    const email = "your@email.com";
+    const phone = "+639926594206";
+    const email = "casteloeliezerglenn@gmail.com";
     const location = "Nueva Ecija, Philippines";
-    const website = "https://yourwebsite.com";
+    const website = "https://elie.com";
 
     const vCard = `BEGIN:VCARD
 VERSION:3.0
