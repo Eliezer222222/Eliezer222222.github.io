@@ -1,4 +1,4 @@
-function saveContact() {
+async function saveContact() {
     const firstName = "Eliezer Glenn";
     const lastName = "Castelo";
     const organization = "Your Company";
@@ -20,12 +20,32 @@ ADR;TYPE=WORK:;;${location};;;;
 URL:${website}
 END:VCARD`;
 
+    const file = new File(
+        [vCard],
+        `${firstName}_${lastName}.vcf`,
+        { type: "text/vcard" }
+    );
+
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        try {
+            await navigator.share({
+                files: [file],
+                title: `${firstName} ${lastName}`,
+                text: "Save this contact"
+            });
+            return;
+        } catch (error) {
+            if (error.name === "AbortError") {
+                return;
+            }
+        }
+    }
+
     const blob = new Blob([vCard], {
         type: "text/vcard;charset=utf-8"
     });
 
     const url = URL.createObjectURL(blob);
-
     const link = document.createElement("a");
 
     link.href = url;
@@ -35,7 +55,9 @@ END:VCARD`;
     link.click();
     document.body.removeChild(link);
 
-    URL.revokeObjectURL(url);
+    setTimeout(() => {
+        URL.revokeObjectURL(url);
+    }, 1000);
 }
 
 async function shareCard() {
@@ -49,7 +71,9 @@ async function shareCard() {
         try {
             await navigator.share(shareData);
         } catch (error) {
-            console.log("Share cancelled.");
+            if (error.name !== "AbortError") {
+                console.log("Share failed.");
+            }
         }
 
         return;
