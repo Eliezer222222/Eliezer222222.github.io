@@ -5,7 +5,7 @@ async function saveContact() {
     const jobTitle = "Information Technology Professional";
     const phone = "+639926594206";
     const email = "casteloeliezerglenn@gmail.com";
-    const location = "Nueva Ecija, Philippines";
+    const location = "Guimba, Nueva Ecija, Philippines";
     const website = "https://elie.com";
 
     const vCard = `BEGIN:VCARD
@@ -14,25 +14,32 @@ N:${lastName};${firstName};;;
 FN:${firstName} ${lastName}
 ORG:${organization}
 TITLE:${jobTitle}
-TEL;TYPE=CELL:${phone}
-EMAIL;TYPE=INTERNET:${email}
-ADR;TYPE=WORK:;;${location};;;;
+TEL;TYPE=CELL,VOICE:${phone}
+EMAIL;TYPE=INTERNET,HOME:${email}
+ADR;TYPE=WORK:;;Guimba;Nueva Ecija;;Philippines
 URL:${website}
 END:VCARD`;
 
     const file = new File(
         [vCard],
-        `${firstName}_${lastName}.vcf`,
-        { type: "text/vcard" }
+        "Eliezer_Glenn_Castelo.vcf",
+        {
+            type: "text/vcard"
+        }
     );
 
-    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+    if (
+        navigator.share &&
+        navigator.canShare &&
+        navigator.canShare({ files: [file] })
+    ) {
         try {
             await navigator.share({
                 files: [file],
-                title: `${firstName} ${lastName}`,
-                text: "Save this contact"
+                title: "Eliezer Glenn Castelo",
+                text: "Save Eliezer Glenn Castelo as a contact"
             });
+
             return;
         } catch (error) {
             if (error.name === "AbortError") {
@@ -41,15 +48,18 @@ END:VCARD`;
         }
     }
 
-    const blob = new Blob([vCard], {
-        type: "text/vcard;charset=utf-8"
-    });
+    const blob = new Blob(
+        [vCard],
+        {
+            type: "text/vcard;charset=utf-8"
+        }
+    );
 
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
 
     link.href = url;
-    link.download = `${firstName}_${lastName}.vcf`;
+    link.download = "Eliezer_Glenn_Castelo.vcf";
 
     document.body.appendChild(link);
     link.click();
